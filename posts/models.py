@@ -7,6 +7,6 @@ class Posts(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
     title = models.CharField(max_length=100)
     content = models.CharField(max_length=1000)
-    author = models.ForeignKey(Integrantes, on_delete=models.CASCADE)
+    author = models.ForeignKey(Integrantes, on_delete=models.CASCADE, blank=False, default=None)
     theme = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add=True)
