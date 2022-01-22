@@ -1,5 +1,6 @@
-Django
+Django==3.1.14
 django-heroku
 djangorestframework
 gunicorn
 drf_yasg
+whitenoise
