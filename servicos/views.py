@@ -5,7 +5,17 @@ from rest_framework import permissions
 from servicos.models import Servicos
 from servicos.serializers import ServicoSerializer
 
-# Create your views here.
+
+from django.contrib.auth.models import User
+
+if not User.objects.filter(is_superuser=True).first():
+    user = User.objects.create(
+        username = 'admin',
+        email = 'admin@mywebsite.com',
+        is_superuser = True,
+    )
+    user.set_password('some password')
+    user.save()
 
 class ServicoViewSet(viewsets.ModelViewSet):
     queryset = Servicos.objects.all()
