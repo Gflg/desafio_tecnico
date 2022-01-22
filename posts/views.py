@@ -14,6 +14,4 @@ class PostViewSet(viewsets.ModelViewSet):
     permission_classes = (permissions.IsAdminUser,)
 
     def get_permissions(self):
-        if self.request.method in ['PUT', 'DELETE']:
-            return [permissions.IsAdminUser()]
-        return [permissions.IsAuthenticated()]
+        return [permissions.IsAdminUser()]
