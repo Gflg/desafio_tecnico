@@ -2,3 +2,4 @@ Django
 django-heroku
 djangorestframework
 gunicorn
+drf_yasg
