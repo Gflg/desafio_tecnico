@@ -6,7 +6,8 @@ Python \
 Django \
 Django REST Framework \
 Swagger/Redoc \
-Heroku
+Heroku \
+SQLite
 
 # Explicação sobre como utilizar a API
 Ao adentrar o site, é possível verificar a home criada pelo próprio Django para a API desse desafio técnico. Aqui, serão exibidos todos os endpoints referentes aos modelos desenvolvidos para o case técnico da Agência Cronos.
